@@ -665,6 +665,11 @@ nav {
   align-items: start;
 }
 
+.about-bio {
+  position: sticky;
+  top: calc(var(--nav-height) + 2rem);
+}
+
 .about-quote {
   margin-top: 2rem;
   padding: 1.25rem 1.5rem;
@@ -864,7 +869,7 @@ nav {
 /* ── Repos ─────────────────────────────────────────────────── */
 .repos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 360px));
   gap: 1.25rem;
 }
 
@@ -980,7 +985,19 @@ nav {
   margin: 1rem 0 2.5rem;
 }
 
-.contact-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.contact-actions-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
 
 /* ── Footer ────────────────────────────────────────────────── */
 footer {
