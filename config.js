@@ -22,7 +22,7 @@ const CONFIG = {
   ],
 
   github: "https://github.com/ankitsingh7392",
-  linkedin: "https://linkedin.com/in/your-handle",   // ← update this
+  linkedin: "https://www.linkedin.com/in/ankit-singh-37a11ba5/",
   calendly: "https://calendly.com/your-handle",       // ← update this
 
   // Repos to highlight — exact names from GitHub
