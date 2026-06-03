@@ -3,59 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ankit Singh — Senior SDET</title>
-  <meta name="description" content="Senior Software Engineer in Test with 7+ years building automation frameworks and quality systems for cloud-native products." />
+  <title id="page-title">Portfolio</title>
+  <meta name="description" id="page-desc" content="" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- NAV -->
   <nav>
-    <span class="nav-name">AS</span>
+    <div class="nav-logo">
+      <div class="nav-logo-mark" id="nav-initials"></div>
+    </div>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-      <span class="icon-sun">☀️</span>
-      <span class="icon-moon">🌙</span>
-    </button>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+      </button>
+    </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-      <p class="hero-eyebrow">Hello, I'm</p>
-      <h1 id="hero-name"></h1>
+      <div class="hero-avatar-wrap">
+        <img src="photo.jpg" alt="" class="hero-avatar" id="hero-avatar" />
+        <div class="hero-avatar-ring"></div>
+      </div>
+      <div class="hero-eyebrow" id="hero-eyebrow"></div>
+      <h1><span class="gradient-text" id="hero-name"></span></h1>
       <h2 id="hero-title"></h2>
       <p class="hero-tagline" id="hero-tagline"></p>
       <div class="hero-meta">
-        <span id="hero-location">📍</span>
+        <span id="hero-location"></span>
+        <span class="meta-sep">·</span>
         <span id="hero-visa" class="badge"></span>
       </div>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" id="cta-book" class="btn btn-secondary" target="_blank" rel="noopener">Book a Call</a>
-        <a href="#" id="cta-linkedin" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
+      <div class="hero-cta" id="hero-cta"></div>
     </div>
-    <div class="hero-scroll">↓</div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- AI FOCUS CARD -->
+  <section class="section-ai">
+    <div class="container">
+      <div class="ai-card reveal" id="ai-card"></div>
+    </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="section">
+  <section id="about" class="section section-alt">
     <div class="container">
-      <h3 class="section-label">About</h3>
+      <div class="section-header reveal">
+        <div class="section-label">About</div>
+        <h2 class="section-title" id="about-title"></h2>
+      </div>
       <div class="about-grid">
-        <div class="about-bio" id="about-bio"></div>
-        <div class="about-sidebar">
-          <h4>Skills</h4>
-          <div class="skills" id="skills-list"></div>
+        <div class="about-bio reveal reveal-delay-1" id="about-bio"></div>
+        <div class="about-sidebar reveal reveal-delay-2">
+          <div id="skills-groups"></div>
           <div class="about-open" id="about-open"></div>
         </div>
       </div>
@@ -65,16 +81,29 @@
   <!-- EXPERIENCE -->
   <section id="experience" class="section">
     <div class="container">
-      <h3 class="section-label">Experience</h3>
+      <div class="section-header reveal">
+        <div class="section-label">Experience</div>
+        <h2 class="section-title" id="exp-title"></h2>
+      </div>
       <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <!-- RECOGNITION -->
+  <section class="section-recognition">
+    <div class="container">
+      <div class="recognition-strip reveal" id="recognition-strip"></div>
     </div>
   </section>
 
   <!-- PROJECTS -->
   <section id="projects" class="section section-alt">
     <div class="container">
-      <h3 class="section-label">Projects</h3>
-      <p class="section-sub">Live from GitHub — always up to date.</p>
+      <div class="section-header reveal">
+        <div class="section-label">Projects</div>
+        <h2 class="section-title" id="projects-title"></h2>
+        <p class="section-sub" id="projects-sub"></p>
+      </div>
       <div class="repos-grid" id="repos-grid">
         <div class="repo-loading">Fetching repositories…</div>
       </div>
@@ -83,25 +112,20 @@
 
   <!-- CONTACT -->
   <section id="contact" class="section">
-    <div class="container contact-container">
-      <h3 class="section-label">Get in Touch</h3>
-      <p class="contact-sub">Whether you have a role in mind, want to collaborate, or just want to talk engineering — I'm always open to a conversation.</p>
-      <div class="contact-actions">
-        <a href="#" id="book-btn" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
-          📅 Book a 30-min call
-        </a>
-        <a href="#" id="linkedin-btn" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
-          LinkedIn
-        </a>
-        <a href="#" id="github-btn" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
-          GitHub
-        </a>
+    <div class="container">
+      <div class="contact-container reveal">
+        <div class="contact-card">
+          <div class="section-label" style="justify-content:center">Contact</div>
+          <h2 class="section-title" id="contact-title"></h2>
+          <p class="contact-sub" id="contact-sub"></p>
+          <div class="contact-actions" id="contact-actions"></div>
+        </div>
       </div>
     </div>
   </section>
 
   <footer>
-    <p id="footer-name"></p>
+    <p id="footer-text"></p>
   </footer>
 
   <script src="config.js"></script>
