@@ -72,6 +72,19 @@ const observer = new IntersectionObserver(entries => {
 
 const observe = node => observer.observe(node);
 
+// ── Stats strip ───────────────────────────────────────────────
+
+const statsStrip = el("stats-strip");
+CONFIG.stats.forEach(stat => {
+  const card = document.createElement("div");
+  card.className = "stat-card";
+  card.innerHTML = `
+    <div class="stat-value">${stat.value}</div>
+    <div class="stat-label">${stat.label}</div>
+  `;
+  statsStrip.appendChild(card);
+});
+
 // ── AI Focus Card ─────────────────────────────────────────────
 
 el("ai-card").innerHTML = `

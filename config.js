@@ -7,9 +7,16 @@ const CONFIG = {
   availability: "Open to Senior SDET / QE roles · Hybrid or Remote · UK Based · Skilled Worker Visa",
 
   bio: [
-    "I architect test frameworks that simulate real-world customer workflows and validate the reliability of distributed systems — across REST and GraphQL microservices, container security, and multi-cloud infrastructure.",
-    "Currently at <strong>Sysdig</strong>, I lead automation across AWS, Azure, GCP, IBM Cloud, and Oracle Cloud, provisioning environments with Terraform and Ansible. Previously at <strong>Lacework</strong>, I delivered compliance automation covering CIS, SOC 2, HIPAA, NIST, and PCI DSS, and built UI regression suites at scale with Selenium and Pytest.",
-    "I care about quality as a culture — embedding gates into deployment lifecycles, mentoring engineers, and collaborating with DevOps and platform teams to make <em>release-anytime</em> a reality rather than an aspiration."
+    "Senior automation engineer with 8+ years building test systems for cloud-native security platforms. Currently at <strong>Sysdig</strong>, leading quality engineering across <strong>5 cloud providers</strong> — and actively building <strong>LLM-powered test generation</strong> and <strong>AI-driven CI/CD failure analysis</strong> tools that are changing how the team ships.",
+    "Before that, 6 years at <strong>Lacework</strong> delivering compliance automation for CIS, SOC 2, HIPAA, NIST, and PCI DSS — owning <strong>90% of the shared Kubernetes testing libraries</strong> used across the entire QA team.",
+    "I don't treat quality as a gate at the end of a pipeline. I embed it into the deployment lifecycle itself — working directly with DevOps and platform teams so engineers ship with confidence, not crossed fingers."
+  ],
+
+  stats: [
+    { value: "8+",  label: "Years Experience" },
+    { value: "5",   label: "Cloud Platforms" },
+    { value: "6",   label: "Compliance Frameworks" },
+    { value: "45%", label: "Test Authoring Reduced" }
   ],
 
   aiCard: {
