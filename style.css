@@ -476,9 +476,9 @@ nav {
 
 /* ── Stats strip ───────────────────────────────────────────── */
 .section-stats {
-  padding: 2rem 2rem 0;
+  padding: 2rem 2rem 2rem;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .stats-strip {
@@ -528,10 +528,9 @@ nav {
 
 /* ── AI Focus Card ─────────────────────────────────────────── */
 .section-ai {
-  padding: 0 2rem;
-  margin-top: -2rem;
+  padding: 2rem 2rem 0;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .ai-card {
