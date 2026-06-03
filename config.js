@@ -23,7 +23,7 @@ const CONFIG = {
 
   github: "https://github.com/ankitsingh7392",
   linkedin: "https://www.linkedin.com/in/ankit-singh-37a11ba5/",
-  calendly: "https://calendly.com/your-handle",       // ← update this
+  calendly: "https://calendly.com/ankitsingh7392/30min",
 
   // Repos to highlight — exact names from GitHub
   // Leave empty [] to auto-show your 6 most recently updated public repos
