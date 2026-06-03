@@ -6,11 +6,11 @@
     "start": "Nov 2023",
     "end": "Present",
     "highlights": [
-      "Architected a Generative AI-powered test generation framework using prompt engineering — reduced manual test authoring by <strong>45%</strong> and expanded edge-case coverage across microservices.",
-      "Built LLM-based tooling to automatically analyse CI/CD failure logs, categorise root causes, and surface remediation suggestions — cut developer turnaround time by <strong>30%</strong>.",
-      "Designed end-to-end automation frameworks simulating real-world customer workflows across container vulnerability scanning, agentless security, and compliance workloads (Python, Playwright, Pytest).",
-      "Validated product behaviour across <strong>AWS, Azure, GCP, IBM Cloud, and Oracle Cloud</strong> using Terraform-provisioned, Ansible-configured multi-cloud test environments.",
-      "Embedded quality gates into deployment pipelines — enabling release-anytime deployments with high confidence across every build."
+      "Reduced manual test case authoring by <strong>45%</strong> and increased edge-case coverage across microservices, by architecting a Generative AI-powered test generation framework using prompt engineering.",
+      "Improved developer turnaround time by <strong>30%</strong> on CI/CD failures, by engineering custom LLM-based tooling that automatically categorises failure root causes and surfaces instant remediation suggestions.",
+      "Eliminated manual regression gaps across container vulnerability scanning, agentless security, and compliance workloads, by building end-to-end Python/Playwright/Pytest frameworks integrated into CI/CD pipelines and executed on every build.",
+      "Validated product reliability across <strong>5 cloud platforms</strong> (AWS, Azure, GCP, IBM Cloud, Oracle Cloud), by architecting fully reproducible multi-cloud test environments provisioned with Terraform and configured with Ansible.",
+      "Enabled release-anytime deployment confidence with minimal risk, by embedding automated quality gates into deployment lifecycles in collaboration with DevOps, Security, and Platform teams."
     ]
   },
   {
@@ -20,11 +20,11 @@
     "start": "Nov 2017",
     "end": "Oct 2023",
     "highlights": [
-      "Delivered compliance automation covering <strong>CIS, SOC 2, HIPAA, NIST, PCI DSS, and ISO</strong> standards for AWS, Azure, and GCP — built as distributed modules that integrate directly with each cloud provider.",
-      "Built data-driven automation to generate traffic across Linux hosts and Kubernetes clusters (ECS, Fargate, EKS) for realistic load and security testing.",
-      "Created UI regression and smoke test suites with Selenium and Pytest, integrated into post-merge pipelines executing on every cloud deployment.",
-      "Led the design and implementation of <strong>90% of shared Kubernetes testing libraries</strong> — covering Docker deployments, database validation, and UI data verification.",
-      "Mentored junior QA engineers on test design, automation architecture, and implementation best practices."
+      "Automated compliance validation across <strong>6 regulatory frameworks</strong> (CIS, SOC 2, HIPAA, NIST, PCI DSS, ISO) on AWS, Azure, and GCP, by designing distributed automation modules that integrate directly with each cloud provider's API.",
+      "Achieved realistic security test coverage across Linux hosts and Kubernetes clusters (ECS, Fargate, EKS), by building data-driven automation that generates representative workload traffic for threat detection validation.",
+      "Reduced post-deployment regression risk to near zero, by creating Selenium/Pytest UI test suites integrated into post-merge pipelines that execute Sanity, Smoke, and Regression suites automatically on every cloud deployment.",
+      "Accelerated team-wide test development velocity, by leading the design and delivery of <strong>90% of shared Kubernetes testing libraries</strong> covering Docker deployments, database validation, and UI verification.",
+      "Raised team capability and reduced onboarding time, by mentoring junior QA engineers on automation architecture, test design, and implementation through hands-on code reviews and pairing sessions."
     ]
   },
   {
@@ -34,9 +34,9 @@
     "start": "Nov 2016",
     "end": "Nov 2017",
     "highlights": [
-      "Built an AssertJ-based automation framework for a Java/Swing IoT application (Shooting Detectors), covering functional and regression test scenarios.",
-      "Developed shell scripts for end-to-end system testing, integrated with the AssertJ framework for full pipeline coverage.",
-      "Tracked and triaged defects in Jira, collaborated with developers to validate fixes, and maintained test suites in sync with evolving requirements under weekly Agile sprints."
+      "Established automated test coverage for a Java/Swing IoT application (Shooting Detectors) from zero, by building an AssertJ-based framework covering functional and regression scenarios.",
+      "Achieved full pipeline test coverage with no manual handoff, by developing shell scripts for end-to-end system testing integrated directly with the AssertJ framework.",
+      "Maintained weekly release cadence without quality regressions, by triaging defects in Jira, validating developer fixes, and keeping test suites continuously aligned with evolving requirements under Agile sprints."
     ]
   }
 ]
