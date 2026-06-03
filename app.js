@@ -153,26 +153,29 @@ set("contact-title",  "Let's talk.");
 set("contact-sub",    "Whether you have a role in mind, want to collaborate, or just want to talk engineering — I'm always open to a conversation.", "textContent");
 
 // Contact actions
+const ICONS = {
+  calendly: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><circle cx="12" cy="15" r="2"/></svg>`,
+  email:    `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>`,
+  linkedin: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>`,
+  github:   `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>`,
+};
+
 el("contact-actions").innerHTML = `
-  <a href="${CONFIG.calendly}" class="contact-link" target="_blank" rel="noopener">
-    <span class="contact-link-icon">📅</span>
+  <a href="${CONFIG.calendly}" class="contact-link" style="--card-color:#7c3aed;--card-color-light:#7c3aed22" target="_blank" rel="noopener">
+    <span class="contact-link-icon">${ICONS.calendly}</span>
     <span class="contact-link-label">Book a Call</span>
-    <span class="contact-link-sub">30 min · Calendly</span>
   </a>
-  <a href="mailto:${CONFIG.email}" class="contact-link">
-    <span class="contact-link-icon">✉️</span>
+  <a href="mailto:${CONFIG.email}" class="contact-link" style="--card-color:#2563eb;--card-color-light:#2563eb22">
+    <span class="contact-link-icon">${ICONS.email}</span>
     <span class="contact-link-label">Email</span>
-    <span class="contact-link-sub">${CONFIG.email}</span>
   </a>
-  <a href="${CONFIG.linkedin}" class="contact-link" target="_blank" rel="noopener">
-    <span class="contact-link-icon">💼</span>
+  <a href="${CONFIG.linkedin}" class="contact-link" style="--card-color:#0077b5;--card-color-light:#0077b522" target="_blank" rel="noopener">
+    <span class="contact-link-icon">${ICONS.linkedin}</span>
     <span class="contact-link-label">LinkedIn</span>
-    <span class="contact-link-sub">Connect</span>
   </a>
-  <a href="${CONFIG.github}" class="contact-link" target="_blank" rel="noopener">
-    <span class="contact-link-icon">⌥</span>
+  <a href="${CONFIG.github}" class="contact-link" style="--card-color:#e2e8f0;--card-color-light:#e2e8f015" target="_blank" rel="noopener">
+    <span class="contact-link-icon">${ICONS.github}</span>
     <span class="contact-link-label">GitHub</span>
-    <span class="contact-link-sub">@ankitsingh7392</span>
   </a>
 `;
 
