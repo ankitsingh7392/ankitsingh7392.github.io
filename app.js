@@ -52,6 +52,40 @@ toggle.addEventListener("click", () => {
   localStorage.setItem("theme", next);
 });
 
+// ── Experience timeline ──────────────────────────────────────
+
+async function loadExperience() {
+  try {
+    const res = await fetch("experience.json");
+    const jobs = await res.json();
+    const timeline = document.getElementById("timeline");
+
+    jobs.forEach(job => {
+      const item = document.createElement("div");
+      item.className = "timeline-item";
+      item.innerHTML = `
+        <div class="timeline-header">
+          <span class="timeline-company">${job.company}</span>
+          <span class="timeline-period">${job.start} — ${job.end}</span>
+        </div>
+        <div class="timeline-meta">
+          <span class="timeline-role">${job.role}</span>
+          <span class="timeline-location">📍 ${job.location}</span>
+        </div>
+        <ul class="timeline-highlights">
+          ${job.highlights.map(h => `<li>${h}</li>`).join("")}
+        </ul>
+      `;
+      timeline.appendChild(item);
+    });
+  } catch {
+    document.getElementById("timeline").innerHTML =
+      `<p style="color:var(--text-muted)">Could not load experience.</p>`;
+  }
+}
+
+loadExperience();
+
 // ── GitHub repos ─────────────────────────────────────────────
 
 const GITHUB_USER = CONFIG.github.split("/").pop();

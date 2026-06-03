@@ -1,0 +1,42 @@
+[
+  {
+    "company": "Sysdig",
+    "role": "Senior Software Engineer in Test",
+    "location": "Belfast, UK (Remote)",
+    "start": "Nov 2023",
+    "end": "Present",
+    "highlights": [
+      "Architected a Generative AI-powered test generation framework using prompt engineering — reduced manual test authoring by <strong>45%</strong> and expanded edge-case coverage across microservices.",
+      "Built LLM-based tooling to automatically analyse CI/CD failure logs, categorise root causes, and surface remediation suggestions — cut developer turnaround time by <strong>30%</strong>.",
+      "Designed end-to-end automation frameworks simulating real-world customer workflows across container vulnerability scanning, agentless security, and compliance workloads (Python, Playwright, Pytest).",
+      "Validated product behaviour across <strong>AWS, Azure, GCP, IBM Cloud, and Oracle Cloud</strong> using Terraform-provisioned, Ansible-configured multi-cloud test environments.",
+      "Embedded quality gates into deployment pipelines — enabling release-anytime deployments with high confidence across every build."
+    ]
+  },
+  {
+    "company": "Lacework, Inc",
+    "role": "SDET Engineer",
+    "location": "Belfast, UK",
+    "start": "Nov 2017",
+    "end": "Oct 2023",
+    "highlights": [
+      "Delivered compliance automation covering <strong>CIS, SOC 2, HIPAA, NIST, PCI DSS, and ISO</strong> standards for AWS, Azure, and GCP — built as distributed modules that integrate directly with each cloud provider.",
+      "Built data-driven automation to generate traffic across Linux hosts and Kubernetes clusters (ECS, Fargate, EKS) for realistic load and security testing.",
+      "Created UI regression and smoke test suites with Selenium and Pytest, integrated into post-merge pipelines executing on every cloud deployment.",
+      "Led the design and implementation of <strong>90% of shared Kubernetes testing libraries</strong> — covering Docker deployments, database validation, and UI data verification.",
+      "Mentored junior QA engineers on test design, automation architecture, and implementation best practices."
+    ]
+  },
+  {
+    "company": "Neova Solutions",
+    "role": "SDET",
+    "location": "Pune, India",
+    "start": "Nov 2016",
+    "end": "Nov 2017",
+    "highlights": [
+      "Built an AssertJ-based automation framework for a Java/Swing IoT application (Shooting Detectors), covering functional and regression test scenarios.",
+      "Developed shell scripts for end-to-end system testing, integrated with the AssertJ framework for full pipeline coverage.",
+      "Tracked and triaged defects in Jira, collaborated with developers to validate fixes, and maintained test suites in sync with evolving requirements under weekly Agile sprints."
+    ]
+  }
+]
