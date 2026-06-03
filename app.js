@@ -19,7 +19,14 @@ set("hero-eyebrow",  CONFIG.availability, "textContent");
 set("hero-title",    CONFIG.title,        "textContent");
 set("hero-tagline",  CONFIG.tagline,      "textContent");
 set("hero-location", "📍 " + CONFIG.location, "textContent");
-set("hero-visa",     CONFIG.visa,         "textContent");
+set("hero-visa", CONFIG.visa, "textContent");
+// Hide visa badge and separator if empty
+if (!CONFIG.visa) {
+  const badge = el("hero-visa");
+  const sep   = document.querySelector(".meta-sep");
+  if (badge) badge.style.display = "none";
+  if (sep)   sep.style.display   = "none";
+}
 
 // Avatar alt
 const avatar = el("hero-avatar");

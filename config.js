@@ -3,7 +3,7 @@ const CONFIG = {
   title: "Senior Software Engineer in Test",
   tagline: "8+ years building automation frameworks and quality systems for cloud-native products at scale.",
   location: "Belfast, UK",
-  visa: "UK Skilled Worker Visa",
+  visa: "",
   availability: "Open to Senior SDET / QE roles · Hybrid or Remote · UK Based",
 
   bio: [
