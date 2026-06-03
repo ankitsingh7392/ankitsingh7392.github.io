@@ -75,7 +75,9 @@ const observe = node => observer.observe(node);
 // ── AI Focus Card ─────────────────────────────────────────────
 
 el("ai-card").innerHTML = `
-  <div class="ai-card-icon">🤖</div>
+  <div class="ai-card-icon">
+    <img src="ai-icon.svg" alt="Neural network" width="80" height="80" />
+  </div>
   <div>
     <div class="ai-card-label">${CONFIG.aiCard.label}</div>
     <div class="ai-card-heading">${CONFIG.aiCard.heading}</div>
@@ -100,13 +102,18 @@ const groupsEl = el("skills-groups");
 CONFIG.skillGroups.forEach(group => {
   const wrap = document.createElement("div");
   wrap.className = "skill-group";
-  wrap.innerHTML = `<div class="skill-group-label">${group.label}</div>`;
+  wrap.innerHTML = `
+    <div class="skill-group-label" style="color:${group.color}">
+      <span class="skill-group-dot" style="background:${group.color}"></span>
+      ${group.label}
+    </div>`;
   const tags = document.createElement("div");
   tags.className = "skills";
   group.skills.forEach(skill => {
     const tag = document.createElement("span");
     tag.className = "skill-tag";
     tag.textContent = skill;
+    tag.style.setProperty("--tag-color", group.color);
     tags.appendChild(tag);
   });
   wrap.appendChild(tags);

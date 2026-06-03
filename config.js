@@ -67,26 +67,32 @@ const CONFIG = {
   skillGroups: [
     {
       label: "AI & Emerging",
+      color: "#7c3aed",
       skills: ["Generative AI", "Prompt Engineering", "LLM Tooling"]
     },
     {
       label: "Languages",
+      color: "#2563eb",
       skills: ["Python", "Java", "TypeScript", "Shell"]
     },
     {
       label: "Test Frameworks",
+      color: "#059669",
       skills: ["Playwright", "Pytest", "Selenium", "Cucumber", "TestNG", "Appium"]
     },
     {
       label: "Cloud & Infra",
+      color: "#ea580c",
       skills: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform", "Ansible"]
     },
     {
       label: "CI/CD",
+      color: "#db2777",
       skills: ["GitHub Actions", "GitLab CI", "Jenkins", "ArgoCD", "Harness"]
     },
     {
       label: "APIs & Observability",
+      color: "#0891b2",
       skills: ["REST", "GraphQL", "Postman", "Grafana", "Prometheus"]
     }
   ],

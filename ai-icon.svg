@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <defs>
+    <radialGradient id="nodeGrad1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </radialGradient>
+    <radialGradient id="nodeGrad2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </radialGradient>
+    <radialGradient id="nodeGrad3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f0abfc"/>
+      <stop offset="100%" stop-color="#a21caf"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-strong">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Connection lines -->
+  <g stroke-width="0.8" fill="none" opacity="0.4">
+    <!-- Input to hidden -->
+    <line x1="12" y1="18" x2="32" y2="14" stroke="#7c3aed"><animate attributeName="opacity" values="0.2;0.8;0.2" dur="2.1s" repeatCount="indefinite"/></line>
+    <line x1="12" y1="40" x2="32" y2="14" stroke="#2563eb"><animate attributeName="opacity" values="0.8;0.2;0.8" dur="1.8s" repeatCount="indefinite"/></line>
+    <line x1="12" y1="62" x2="32" y2="14" stroke="#7c3aed"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.4s" repeatCount="indefinite"/></line>
+    <line x1="12" y1="18" x2="32" y2="40" stroke="#2563eb"><animate attributeName="opacity" values="0.9;0.3;0.9" dur="1.6s" repeatCount="indefinite"/></line>
+    <line x1="12" y1="40" x2="32" y2="40" stroke="#7c3aed"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.2s" repeatCount="indefinite"/></line>
+    <line x1="12" y1="62" x2="32" y2="40" stroke="#a21caf"><animate attributeName="opacity" values="0.7;0.2;0.7" dur="1.9s" repeatCount="indefinite"/></line>
+    <line x1="12" y1="18" x2="32" y2="66" stroke="#2563eb"><animate attributeName="opacity" values="0.2;0.7;0.2" dur="2.3s" repeatCount="indefinite"/></line>
+    <line x1="12" y1="40" x2="32" y2="66" stroke="#7c3aed"><animate attributeName="opacity" values="0.6;0.2;0.6" dur="1.7s" repeatCount="indefinite"/></line>
+    <line x1="12" y1="62" x2="32" y2="66" stroke="#a21caf"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="2.0s" repeatCount="indefinite"/></line>
+
+    <!-- Hidden to hidden -->
+    <line x1="32" y1="14" x2="50" y2="27" stroke="#7c3aed"><animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/></line>
+    <line x1="32" y1="14" x2="50" y2="53" stroke="#2563eb"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.5s" repeatCount="indefinite"/></line>
+    <line x1="32" y1="40" x2="50" y2="27" stroke="#a21caf"><animate attributeName="opacity" values="0.8;0.3;0.8" dur="1.8s" repeatCount="indefinite"/></line>
+    <line x1="32" y1="40" x2="50" y2="53" stroke="#7c3aed"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.1s" repeatCount="indefinite"/></line>
+    <line x1="32" y1="66" x2="50" y2="27" stroke="#2563eb"><animate attributeName="opacity" values="0.7;0.2;0.7" dur="1.6s" repeatCount="indefinite"/></line>
+    <line x1="32" y1="66" x2="50" y2="53" stroke="#a21caf"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.3s" repeatCount="indefinite"/></line>
+
+    <!-- Hidden to output -->
+    <line x1="50" y1="27" x2="68" y2="40" stroke="#7c3aed"><animate attributeName="opacity" values="0.6;1;0.6" dur="1.9s" repeatCount="indefinite"/></line>
+    <line x1="50" y1="53" x2="68" y2="40" stroke="#2563eb"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="2.2s" repeatCount="indefinite"/></line>
+  </g>
+
+  <!-- Travelling signal dots on connections -->
+  <circle r="1.2" fill="#ffffff" opacity="0.9" filter="url(#glow)">
+    <animateMotion dur="1.8s" repeatCount="indefinite" path="M12,18 L32,40"/>
+    <animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="1.2" fill="#a78bfa" opacity="0.9" filter="url(#glow)">
+    <animateMotion dur="2.2s" repeatCount="indefinite" path="M32,14 L50,27"/>
+    <animate attributeName="opacity" values="0;1;0" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="1.2" fill="#60a5fa" opacity="0.9" filter="url(#glow)">
+    <animateMotion dur="1.5s" repeatCount="indefinite" path="M12,62 L32,40"/>
+    <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="1.2" fill="#f0abfc" opacity="0.9" filter="url(#glow)">
+    <animateMotion dur="2.0s" repeatCount="indefinite" path="M50,53 L68,40"/>
+    <animate attributeName="opacity" values="0;1;0" dur="2.0s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="1.2" fill="#ffffff" opacity="0.9" filter="url(#glow)">
+    <animateMotion dur="1.7s" repeatCount="indefinite" path="M32,66 L50,27"/>
+    <animate attributeName="opacity" values="0;1;0" dur="1.7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Input layer nodes -->
+  <circle cx="12" cy="18" r="4.5" fill="url(#nodeGrad1)" filter="url(#glow)">
+    <animate attributeName="r" values="4.5;5.2;4.5" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="12" cy="40" r="4.5" fill="url(#nodeGrad2)" filter="url(#glow)">
+    <animate attributeName="r" values="4.5;5.2;4.5" dur="1.9s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="12" cy="62" r="4.5" fill="url(#nodeGrad1)" filter="url(#glow)">
+    <animate attributeName="r" values="4.5;5.2;4.5" dur="2.1s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Hidden layer 1 -->
+  <circle cx="32" cy="14" r="5" fill="url(#nodeGrad3)" filter="url(#glow-strong)">
+    <animate attributeName="r" values="5;6;5" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="32" cy="40" r="5.5" fill="url(#nodeGrad1)" filter="url(#glow-strong)">
+    <animate attributeName="r" values="5.5;6.5;5.5" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="32" cy="66" r="5" fill="url(#nodeGrad2)" filter="url(#glow-strong)">
+    <animate attributeName="r" values="5;6;5" dur="1.6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Hidden layer 2 -->
+  <circle cx="50" cy="27" r="5" fill="url(#nodeGrad2)" filter="url(#glow-strong)">
+    <animate attributeName="r" values="5;6;5" dur="2.0s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="50" cy="53" r="5" fill="url(#nodeGrad3)" filter="url(#glow-strong)">
+    <animate attributeName="r" values="5;6;5" dur="1.7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Output node -->
+  <circle cx="68" cy="40" r="6.5" fill="url(#nodeGrad1)" filter="url(#glow-strong)">
+    <animate attributeName="r" values="6.5;7.8;6.5" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.85;1;0.85" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Output ring pulse -->
+  <circle cx="68" cy="40" r="6.5" fill="none" stroke="#a78bfa" stroke-width="1.5" opacity="0">
+    <animate attributeName="r" values="7;14;7" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0;0.8" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>
