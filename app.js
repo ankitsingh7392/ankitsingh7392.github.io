@@ -133,6 +133,14 @@ CONFIG.skillGroups.forEach(group => {
   groupsEl.appendChild(wrap);
 });
 
+// Quote
+if (CONFIG.quote) {
+  const q = document.createElement("blockquote");
+  q.className = "about-quote";
+  q.textContent = `"${CONFIG.quote}"`;
+  bioEl.appendChild(q);
+}
+
 // Availability card
 el("about-open").innerHTML = `<p>💼 ${CONFIG.openTo || CONFIG.availability}</p>`;
 
@@ -267,5 +275,16 @@ loadRepos();
 
 requestAnimationFrame(() => {
   document.documentElement.classList.add("js-ready");
-  document.querySelectorAll(".reveal").forEach(observe);
+  document.querySelectorAll(".reveal").forEach(el => {
+    observe(el);
+    // Force elements already in the viewport to become visible immediately
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight) el.classList.add("visible");
+  });
+  // Safety net: reveal everything after 800ms regardless
+  setTimeout(() => {
+    document.querySelectorAll(".reveal:not(.visible)").forEach(el => {
+      el.classList.add("visible");
+    });
+  }, 800);
 });
