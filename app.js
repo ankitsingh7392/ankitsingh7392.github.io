@@ -173,7 +173,7 @@ el("contact-actions").innerHTML = `
     <span class="contact-link-icon">${ICONS.linkedin}</span>
     <span class="contact-link-label">LinkedIn</span>
   </a>
-  <a href="${CONFIG.github}" class="contact-link" style="--card-color:#e2e8f0;--card-color-light:#e2e8f015" target="_blank" rel="noopener">
+  <a href="${CONFIG.github}" class="contact-link" style="--card-color:#3fb950;--card-color-light:#3fb95022" target="_blank" rel="noopener">
     <span class="contact-link-icon">${ICONS.github}</span>
     <span class="contact-link-label">GitHub</span>
   </a>
