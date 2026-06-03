@@ -58,6 +58,8 @@ el("themeToggle").addEventListener("click", () => {
 });
 
 // ── Scroll reveal ─────────────────────────────────────────────
+// js-ready class activates reveal CSS — only set after all content
+// is injected so nothing flashes invisible then reappears.
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -66,10 +68,9 @@ const observer = new IntersectionObserver(entries => {
       observer.unobserve(e.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.08 });
 
-const observe = el => observer.observe(el);
-document.querySelectorAll(".reveal").forEach(observe);
+const observe = node => observer.observe(node);
 
 // ── AI Focus Card ─────────────────────────────────────────────
 
@@ -239,3 +240,12 @@ async function loadRepos() {
 }
 
 loadRepos();
+
+// ── Activate reveal animations ────────────────────────────────
+// Done last — after all content is in the DOM — so nothing is
+// invisible before JS has had a chance to inject content.
+
+requestAnimationFrame(() => {
+  document.documentElement.classList.add("js-ready");
+  document.querySelectorAll(".reveal").forEach(observe);
+});
