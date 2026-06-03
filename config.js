@@ -4,7 +4,7 @@ const CONFIG = {
   tagline: "8+ years building automation frameworks and quality systems for cloud-native products at scale.",
   location: "Belfast, UK",
   visa: "UK Skilled Worker Visa",
-  availability: "Open to Senior SDET / QE roles · Remote or Belfast · UK Skilled Worker Visa",
+  availability: "Open to Senior SDET / QE roles · Hybrid or Remote · UK Based · Skilled Worker Visa",
 
   bio: [
     "I architect test frameworks that simulate real-world customer workflows and validate the reliability of distributed systems — across REST and GraphQL microservices, container security, and multi-cloud infrastructure.",
