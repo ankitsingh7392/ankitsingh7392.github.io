@@ -112,6 +112,7 @@ const CONFIG = {
     { award: "Spot Award",                    org: "Lacework",  year: "2018", icon: "🎯", note: "Delivered automation project ahead of schedule" }
   ],
 
+  email: "ankitsingh7392@gmail.com",
   github: "https://github.com/ankitsingh7392",
   linkedin: "https://www.linkedin.com/in/ankit-singh-37a11ba5/",
   calendly: "https://calendly.com/ankitsingh7392/30min",

@@ -154,9 +154,10 @@ set("contact-sub",    "Whether you have a role in mind, want to collaborate, or 
 
 // Contact actions
 el("contact-actions").innerHTML = `
-  <a href="${CONFIG.calendly}" class="btn btn-primary btn-lg" target="_blank" rel="noopener">📅 Book a 30-min call</a>
-  <a href="${CONFIG.linkedin}" class="btn btn-outline btn-lg"  target="_blank" rel="noopener">LinkedIn ↗</a>
-  <a href="${CONFIG.github}"   class="btn btn-outline btn-lg"  target="_blank" rel="noopener">GitHub ↗</a>
+  <a href="${CONFIG.calendly}"        class="btn btn-primary btn-lg"  target="_blank" rel="noopener">📅 Book a 30-min call</a>
+  <a href="mailto:${CONFIG.email}"   class="btn btn-secondary btn-lg">✉️ Send an email</a>
+  <a href="${CONFIG.linkedin}"        class="btn btn-outline btn-lg"   target="_blank" rel="noopener">LinkedIn ↗</a>
+  <a href="${CONFIG.github}"          class="btn btn-outline btn-lg"   target="_blank" rel="noopener">GitHub ↗</a>
 `;
 
 // Footer
