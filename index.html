@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ankit Singh — Senior SDET</title>
+  <meta name="description" content="Senior Software Engineer in Test with 7+ years building automation frameworks and quality systems for cloud-native products." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <span class="nav-name">AS</span>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="icon-sun">☀️</span>
+      <span class="icon-moon">🌙</span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Hello, I'm</p>
+      <h1 id="hero-name"></h1>
+      <h2 id="hero-title"></h2>
+      <p class="hero-tagline" id="hero-tagline"></p>
+      <div class="hero-meta">
+        <span id="hero-location">📍</span>
+        <span id="hero-visa" class="badge"></span>
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" id="cta-book" class="btn btn-secondary" target="_blank" rel="noopener">Book a Call</a>
+        <a href="#" id="cta-linkedin" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="hero-scroll">↓</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h3 class="section-label">About</h3>
+      <div class="about-grid">
+        <div class="about-bio" id="about-bio"></div>
+        <div class="about-sidebar">
+          <h4>Skills</h4>
+          <div class="skills" id="skills-list"></div>
+          <div class="about-open" id="about-open"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <h3 class="section-label">Projects</h3>
+      <p class="section-sub">Live from GitHub — always up to date.</p>
+      <div class="repos-grid" id="repos-grid">
+        <div class="repo-loading">Fetching repositories…</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container contact-container">
+      <h3 class="section-label">Get in Touch</h3>
+      <p class="contact-sub">Whether you have a role in mind, want to collaborate, or just want to talk engineering — I'm always open to a conversation.</p>
+      <div class="contact-actions">
+        <a href="#" id="book-btn" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+          📅 Book a 30-min call
+        </a>
+        <a href="#" id="linkedin-btn" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+          LinkedIn
+        </a>
+        <a href="#" id="github-btn" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p id="footer-name"></p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
