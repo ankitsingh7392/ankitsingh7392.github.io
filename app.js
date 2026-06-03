@@ -49,7 +49,7 @@ typeText(el("hero-name"), CONFIG.name);
 // ── Theme toggle ──────────────────────────────────────────────
 
 const html = document.documentElement;
-html.setAttribute("data-theme", localStorage.getItem("theme") || "light");
+html.setAttribute("data-theme", localStorage.getItem("theme") || "dark");
 
 el("themeToggle").addEventListener("click", () => {
   const next = html.getAttribute("data-theme") === "light" ? "dark" : "light";
