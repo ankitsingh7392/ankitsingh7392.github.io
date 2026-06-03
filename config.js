@@ -4,7 +4,7 @@ const CONFIG = {
   tagline: "8+ years building automation frameworks and quality systems for cloud-native products at scale.",
   location: "Belfast, UK",
   visa: "UK Skilled Worker Visa",
-  availability: "Open to Senior SDET / QE roles · Hybrid or Remote · UK Based · Skilled Worker Visa",
+  availability: "Open to Senior SDET / QE roles · Hybrid or Remote · UK Based",
 
   bio: [
     "Senior automation engineer with 8+ years building test systems for cloud-native security platforms. Currently at <strong>Sysdig</strong>, leading quality engineering across <strong>5 cloud providers</strong> — and actively building <strong>LLM-powered test generation</strong> and <strong>AI-driven CI/CD failure analysis</strong> tools that are changing how the team ships.",
