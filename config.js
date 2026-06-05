@@ -15,10 +15,10 @@ const CONFIG = {
   quote: "Quality is not an act, it is a habit — and I've spent 8 years making it the default, not the exception.",
 
   stats: [
-    { value: "8+",  label: "Years Experience" },
-    { value: "5",   label: "Cloud Platforms" },
-    { value: "6",   label: "Compliance Frameworks" },
-    { value: "45%", label: "Test Authoring Reduced" }
+    { value: "8+",  label: "Years Building Test Systems" },
+    { value: "5",   label: "Cloud Platforms Automated" },
+    { value: "6",   label: "Security Frameworks Automated" },
+    { value: "45%", label: "Less Manual Test Writing" }
   ],
 
   aiCard: {
