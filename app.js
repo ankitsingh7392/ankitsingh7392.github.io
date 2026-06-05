@@ -85,6 +85,7 @@ const statsStrip = el("stats-strip");
 CONFIG.stats.forEach(stat => {
   const card = document.createElement("div");
   card.className = "stat-card";
+  card.style.setProperty("--stat-color", stat.color || "var(--accent)");
   card.innerHTML = `
     <div class="stat-value">${stat.value}</div>
     <div class="stat-label">${stat.label}</div>
