@@ -136,7 +136,7 @@ const CONFIG = {
   email: "ankitsingh7392@gmail.com",
   github: "https://github.com/ankitsingh7392",
   linkedin: "https://www.linkedin.com/in/ankit-singh-37a11ba5/",
-  calendly: "https://calendly.com/ankitsingh7392/30min",
+  calendly: "https://cal.com/ankit-singh-jw3lep/30min",
 
   pinnedRepos: ["project-ark", "skill-labs"],
 };
