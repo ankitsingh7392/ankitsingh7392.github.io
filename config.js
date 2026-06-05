@@ -138,5 +138,5 @@ const CONFIG = {
   linkedin: "https://www.linkedin.com/in/ankit-singh-37a11ba5/",
   calendly: "https://cal.com/ankit-singh-jw3lep/30min",
 
-  pinnedRepos: ["project-ark", "skill-labs"],
+  pinnedRepos: ["project-ark", "skill-labs", "ai-toolkit"],
 };
