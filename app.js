@@ -36,7 +36,6 @@ if (avatar) avatar.alt = CONFIG.name;
 el("hero-cta").innerHTML = `
   <a href="#experience" class="btn btn-primary">View Experience</a>
   <a href="${CONFIG.calendly}" class="btn btn-secondary" target="_blank" rel="noopener">📅 Book a Call</a>
-  <a href="${CONFIG.linkedin}" class="btn btn-outline"   target="_blank" rel="noopener">LinkedIn ↗</a>
   <button class="btn btn-cv" id="download-cv">⬇ Download CV</button>
 `;
 
@@ -195,7 +194,12 @@ el("contact-actions").innerHTML = `
 `;
 
 // Footer
-set("footer-text", `${CONFIG.name} · ${new Date().getFullYear()}`, "textContent");
+set("footer-copy", `${CONFIG.name} · ${new Date().getFullYear()}`, "textContent");
+el("footer-links").innerHTML = `
+  <a href="mailto:${CONFIG.email}">Email</a>
+  <a href="${CONFIG.linkedin}" target="_blank" rel="noopener">LinkedIn</a>
+  <a href="${CONFIG.github}" target="_blank" rel="noopener">GitHub</a>
+`;
 
 // ── Experience timeline ───────────────────────────────────────
 
@@ -244,6 +248,27 @@ CONFIG.certifications.forEach((c, i) => {
   observe(card);
 });
 
+// ── Education ─────────────────────────────────────────────────
+
+set("education-title", CONFIG.sectionTitles.education);
+
+const eduGrid = el("education-grid");
+if (eduGrid && CONFIG.education) {
+  CONFIG.education.forEach((e, i) => {
+    const card = document.createElement("div");
+    card.className = `education-card reveal reveal-delay-${Math.min(i + 1, 4)}`;
+    card.innerHTML = `
+      <div>
+        <div class="education-degree">${e.degree}</div>
+        <div class="education-institution">${e.institution}</div>
+      </div>
+      <div class="education-year">${e.year}</div>
+    `;
+    eduGrid.appendChild(card);
+    observe(card);
+  });
+}
+
 // ── Recognition strip ─────────────────────────────────────────
 
 set("recognition-title", CONFIG.sectionTitles.recognition);
@@ -262,6 +287,27 @@ CONFIG.recognition.forEach((r, i) => {
   strip.appendChild(card);
   observe(card);
 });
+
+// ── Mobile nav ────────────────────────────────────────────────
+
+const navEl     = document.querySelector("nav");
+const hamburger = el("nav-hamburger");
+const mobileNav = el("nav-mobile");
+
+if (hamburger && mobileNav) {
+  hamburger.addEventListener("click", e => {
+    e.stopPropagation();
+    mobileNav.classList.toggle("open");
+  });
+  mobileNav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => mobileNav.classList.remove("open"));
+  });
+  document.addEventListener("click", e => {
+    if (!navEl.contains(e.target) && !mobileNav.contains(e.target)) {
+      mobileNav.classList.remove("open");
+    }
+  });
+}
 
 // ── GitHub repos ──────────────────────────────────────────────
 

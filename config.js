@@ -110,6 +110,11 @@ const CONFIG = {
     { name: "Claude 101", issuer: "Anthropic", year: "2026", icon: "🎓", link: "https://verify.skilljar.com/c/2j9ffdh9om7d" }
   ],
 
+  education: [
+    { degree: "Bachelor of Engineering (BE)", institution: "LNCT, Indore · Rajiv Gandhi Technical University", year: "2015" },
+    { degree: "Diploma in Advanced Computing (PG-DAC)", institution: "CDAC (C-DAC), Pune", year: "2016" },
+  ],
+
   recognition: [
     { award: "Customer's Choice Award",      org: "Lacework",  year: "2020", icon: "🏆" },
     { award: "Commitment & Dedication Award", org: "Lacework",  year: "2019", icon: "⭐" },
@@ -123,6 +128,7 @@ const CONFIG = {
     projectsSub:  "Live from GitHub — always up to date.",
     certs:        "Credentials & ongoing learning.",
     recognition:  "A few highlights from the journey.",
+    education:    "Foundations behind the craft.",
     contact:      "Let's talk.",
     contactSub:   "Whether you have a role in mind, want to collaborate, or just want to talk engineering — I'm always open to a conversation.",
   },
@@ -132,5 +138,5 @@ const CONFIG = {
   linkedin: "https://www.linkedin.com/in/ankit-singh-37a11ba5/",
   calendly: "https://calendly.com/ankitsingh7392/30min",
 
-  pinnedRepos: ["project-ark"],
+  pinnedRepos: ["project-ark", "skill-labs"],
 };

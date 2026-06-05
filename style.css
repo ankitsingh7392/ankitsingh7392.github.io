@@ -1200,12 +1200,124 @@ footer {
 .lang-CSS        { background: #563d7c; }
 .lang-default    { background: #6b7280; }
 
+/* ── Education ──────────────────────────────────────────────── */
+.education-grid { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.education-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid #7c3aed;
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: box-shadow 0.25s, transform 0.25s;
+  box-shadow: var(--shadow-sm);
+}
+
+.education-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+
+.education-degree {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.education-institution { font-size: 0.78rem; color: var(--text-muted); }
+
+.education-year {
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+  background: color-mix(in srgb, #7c3aed 12%, transparent);
+  color: #7c3aed;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+}
+
+/* ── Mobile nav ─────────────────────────────────────────────── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  padding: 6px 4px;
+  background: none;
+  border: none;
+  margin-left: 0.5rem;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+.nav-mobile {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0.5rem 1.5rem 1rem;
+  display: none;
+  flex-direction: column;
+  z-index: 99;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.nav-mobile.open { display: flex; }
+
+.nav-mobile a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.15s;
+}
+
+.nav-mobile a:last-child { border-bottom: none; }
+.nav-mobile a:hover { color: var(--accent); }
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.footer-links { display: flex; gap: 1.5rem; }
+
+.footer-links a {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  transition: color 0.15s;
+}
+
+.footer-links a:hover { color: var(--text); }
+
 /* ── Responsive ────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .nav-links  { display: none; }
+  .nav-hamburger { display: flex; }
   .hero h1    { font-size: 2.4rem; }
   .contact-card { padding: 2.5rem 1.5rem; }
+}
+
+@media (max-width: 600px) {
+  .footer-inner { flex-direction: column; gap: 0.75rem; text-align: center; }
 }
 
 /* ── CV Template (hidden, used for PDF generation) ───────────── */
