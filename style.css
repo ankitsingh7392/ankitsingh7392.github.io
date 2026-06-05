@@ -591,22 +591,23 @@ nav {
 }
 
 /* ── Skill groups ───────────────────────────────────────────── */
-.skill-group { margin-bottom: 1.5rem; }
+.skill-group { margin-bottom: 1.75rem; }
 
 .skill-group-label {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.75rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .skill-group-dot {
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -774,22 +775,21 @@ nav {
 }
 
 .skill-tag {
-  background: var(--tag-bg);
-  color: var(--tag-text);
-  padding: 0.3rem 0.75rem;
-  border-radius: 7px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  font-family: 'JetBrains Mono', monospace;
-  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--tag-color, var(--accent)) 10%, transparent);
+  color: var(--tag-color, var(--accent));
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  border: 1px solid color-mix(in srgb, var(--tag-color, var(--accent)) 25%, transparent);
   transition: all 0.2s;
   cursor: default;
 }
 
 .skill-tag:hover {
-  background: color-mix(in srgb, var(--tag-color, var(--accent)) 10%, transparent);
-  color: var(--tag-color, var(--accent));
-  border-color: color-mix(in srgb, var(--tag-color, var(--accent)) 35%, transparent);
+  background: color-mix(in srgb, var(--tag-color, var(--accent)) 18%, transparent);
+  border-color: color-mix(in srgb, var(--tag-color, var(--accent)) 50%, transparent);
   transform: translateY(-2px);
 }
 
