@@ -132,7 +132,6 @@ Hard refresh after changes: `Cmd + Shift + R`
 
 ## Git standards
 
-- **No `Co-Authored-By` lines** in any commit message — ever
 - Conventional commit prefixes: `feat:`, `fix:`, `refactor:`, `chore:`
 - Push directly to `main` — this is a personal portfolio, no PR workflow needed
 - GitHub Pages deploys automatically on push — live within ~2 minutes
