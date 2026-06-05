@@ -116,6 +116,17 @@ const CONFIG = {
     { award: "Spot Award",                    org: "Lacework",  year: "2018", icon: "🎯", note: "Delivered automation project ahead of schedule" },
   ],
 
+  sectionTitles: {
+    about:        "Building quality into the<br>core, not bolted on at the end.",
+    experience:   "8 years. 3 companies.<br>One consistent standard.",
+    projects:     "Things I've built.",
+    projectsSub:  "Live from GitHub — always up to date.",
+    certs:        "Credentials & ongoing learning.",
+    recognition:  "A few highlights from the journey.",
+    contact:      "Let's talk.",
+    contactSub:   "Whether you have a role in mind, want to collaborate, or just want to talk engineering — I'm always open to a conversation.",
+  },
+
   email: "ankitsingh7392@gmail.com",
   github: "https://github.com/ankitsingh7392",
   linkedin: "https://www.linkedin.com/in/ankit-singh-37a11ba5/",

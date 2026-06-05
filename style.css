@@ -738,14 +738,42 @@ nav {
 
 .about-quote {
   margin-top: 2rem;
-  padding: 1.25rem 1.5rem;
-  border-left: 3px solid var(--accent);
+  padding: 1.25rem 1.75rem 1.5rem;
   background: var(--surface);
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
   font-size: 0.95rem;
   color: var(--text-muted);
   font-style: italic;
-  line-height: 1.7;
+  line-height: 1.75;
+  position: relative;
+}
+
+.about-quote::before {
+  content: '\201C';
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 0.8;
+  display: block;
+  margin-bottom: 0.4rem;
+  opacity: 0.5;
+}
+
+.about-quote::after {
+  content: '\201D';
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 0;
+  display: block;
+  text-align: right;
+  margin-top: 0.4rem;
+  opacity: 0.5;
 }
 
 .about-bio p {
@@ -755,7 +783,13 @@ nav {
   font-size: 1rem;
 }
 
-.about-bio strong { color: var(--text); font-weight: 600; }
+.about-bio p:first-child {
+  font-size: 1.06rem;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.about-bio strong { color: var(--accent); font-weight: 600; }
 .about-bio em { font-style: italic; color: var(--accent); }
 
 .about-sidebar h4 {
@@ -794,12 +828,37 @@ nav {
 }
 
 .about-open {
-  background: var(--gradient);
+  background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
   border-radius: var(--radius-sm);
   padding: 1.1rem 1.25rem;
 }
 
-.about-open p { font-size: 0.875rem; color: rgba(255,255,255,0.92); line-height: 1.6; }
+.about-open-label {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.65rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.about-open-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.about-open-badge {
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  color: var(--text);
+  border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
 
 /* ── Timeline ──────────────────────────────────────────────── */
 .timeline { position: relative; padding-left: 1.5rem; }

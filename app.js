@@ -108,7 +108,7 @@ el("ai-card").innerHTML = `
 
 // ── About section titles ──────────────────────────────────────
 
-set("about-title", "Building quality into the<br>core, not bolted on at the end.");
+set("about-title", CONFIG.sectionTitles.about);
 
 // Bio
 const bioEl = el("about-bio");
@@ -145,20 +145,26 @@ CONFIG.skillGroups.forEach(group => {
 if (CONFIG.quote) {
   const q = document.createElement("blockquote");
   q.className = "about-quote";
-  q.textContent = `"${CONFIG.quote}"`;
+  q.textContent = CONFIG.quote;
   bioEl.appendChild(q);
 }
 
 // Availability card
-el("about-open").innerHTML = `<p>💼 ${CONFIG.openTo || CONFIG.availability}</p>`;
+const availParts = (CONFIG.openTo || CONFIG.availability).split('·').map(s => s.trim());
+el("about-open").innerHTML = `
+  <div class="about-open-label">Currently Available</div>
+  <div class="about-open-badges">
+    ${availParts.map(p => `<span class="about-open-badge">${p}</span>`).join('')}
+  </div>
+`;
 
 // ── Section copy ──────────────────────────────────────────────
 
-set("exp-title",      "8 years. 3 companies.<br>One consistent standard.");
-set("projects-title", "Things I've built.");
-set("projects-sub",   "Live from GitHub — always up to date.", "textContent");
-set("contact-title",  "Let's talk.");
-set("contact-sub",    "Whether you have a role in mind, want to collaborate, or just want to talk engineering — I'm always open to a conversation.", "textContent");
+set("exp-title",      CONFIG.sectionTitles.experience);
+set("projects-title", CONFIG.sectionTitles.projects);
+set("projects-sub",   CONFIG.sectionTitles.projectsSub, "textContent");
+set("contact-title",  CONFIG.sectionTitles.contact);
+set("contact-sub",    CONFIG.sectionTitles.contactSub, "textContent");
 
 // Contact actions
 const ICONS = {
@@ -219,7 +225,7 @@ CONFIG.experience.forEach((job, i) => {
 
 // ── Certifications ────────────────────────────────────────────
 
-set("certs-title", "Credentials &amp; ongoing learning.");
+set("certs-title", CONFIG.sectionTitles.certs);
 
 const certsGrid = el("certs-grid");
 CONFIG.certifications.forEach((c, i) => {
@@ -239,7 +245,7 @@ CONFIG.certifications.forEach((c, i) => {
 
 // ── Recognition strip ─────────────────────────────────────────
 
-set("recognition-title", "A few highlights from the journey.");
+set("recognition-title", CONFIG.sectionTitles.recognition);
 
 const strip = el("recognition-strip");
 CONFIG.recognition.forEach((r, i) => {
