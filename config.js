@@ -106,10 +106,14 @@ const CONFIG = {
     }
   ],
 
+  certifications: [
+    { name: "Claude 101", issuer: "Anthropic", year: "2026", icon: "🎓", link: "https://verify.skilljar.com/c/2j9ffdh9om7d" }
+  ],
+
   recognition: [
     { award: "Customer's Choice Award",      org: "Lacework",  year: "2020", icon: "🏆" },
     { award: "Commitment & Dedication Award", org: "Lacework",  year: "2019", icon: "⭐" },
-    { award: "Spot Award",                    org: "Lacework",  year: "2018", icon: "🎯", note: "Delivered automation project ahead of schedule" }
+    { award: "Spot Award",                    org: "Lacework",  year: "2018", icon: "🎯", note: "Delivered automation project ahead of schedule" },
   ],
 
   email: "ankitsingh7392@gmail.com",

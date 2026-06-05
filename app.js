@@ -56,7 +56,7 @@ typeText(el("hero-name"), CONFIG.name);
 // ── Theme toggle ──────────────────────────────────────────────
 
 const html = document.documentElement;
-html.setAttribute("data-theme", localStorage.getItem("theme") || "dark");
+html.setAttribute("data-theme", localStorage.getItem("theme") || "light");
 
 el("themeToggle").addEventListener("click", () => {
   const next = html.getAttribute("data-theme") === "light" ? "dark" : "light";
@@ -216,7 +216,29 @@ CONFIG.experience.forEach((job, i) => {
   observe(item);
 });
 
+// ── Certifications ────────────────────────────────────────────
+
+set("certs-title", "Credentials &amp; ongoing learning.");
+
+const certsGrid = el("certs-grid");
+CONFIG.certifications.forEach((c, i) => {
+  const card = document.createElement("div");
+  card.className = `cert-card reveal reveal-delay-${Math.min(i + 1, 4)}`;
+  card.innerHTML = `
+    <div class="cert-icon">${c.icon}</div>
+    <div class="cert-body">
+      <div class="cert-name">${c.name}</div>
+      <div class="cert-meta">${c.issuer} · ${c.year}</div>
+    </div>
+    ${c.link ? `<a class="cert-verify" href="${c.link}" target="_blank" rel="noopener">Verify ↗</a>` : ""}
+  `;
+  certsGrid.appendChild(card);
+  observe(card);
+});
+
 // ── Recognition strip ─────────────────────────────────────────
+
+set("recognition-title", "A few highlights from the journey.");
 
 const strip = el("recognition-strip");
 CONFIG.recognition.forEach((r, i) => {
