@@ -37,6 +37,7 @@ el("hero-cta").innerHTML = `
   <a href="#experience" class="btn btn-primary">View Experience</a>
   <a href="${CONFIG.calendly}" class="btn btn-secondary" target="_blank" rel="noopener">📅 Book a Call</a>
   <a href="${CONFIG.linkedin}" class="btn btn-outline"   target="_blank" rel="noopener">LinkedIn ↗</a>
+  <button class="btn btn-cv" id="download-cv">⬇ Download CV</button>
 `;
 
 // ── Typing animation ──────────────────────────────────────────
@@ -324,6 +325,97 @@ async function loadRepos() {
 }
 
 loadRepos();
+
+// ── CV Download ───────────────────────────────────────────────
+
+function buildCVHTML() {
+  const strip = html => { const d = document.createElement("div"); d.innerHTML = html; return d.textContent || ""; };
+
+  const skillsHTML = CONFIG.skillGroups.map(g => `
+    <tr>
+      <td class="cv-skill-cat">${g.label}</td>
+      <td>${g.skills.join(", ")}</td>
+    </tr>`).join("");
+
+  const experienceHTML = CONFIG.experience.map(job => `
+    <div class="cv-job">
+      <div class="cv-job-header">
+        <span class="cv-job-title">${job.role}</span>
+        <span class="cv-job-date">${job.start} – ${job.end}</span>
+      </div>
+      <div class="cv-job-company">${job.company} — ${job.location}</div>
+      <ul>${job.highlights.map(h => `<li>${strip(h)}</li>`).join("")}</ul>
+    </div>`).join("");
+
+  const certsHTML = CONFIG.certifications.map(c =>
+    `<tr><td class="cv-skill-cat">${c.issuer}</td><td>${c.name} (${c.year})</td></tr>`).join("");
+
+  const awardsHTML = CONFIG.recognition.map(r =>
+    `<li><strong>${r.award}</strong> — ${r.org}, ${r.year}${r.note ? ". " + r.note : ""}</li>`).join("");
+
+  return `<div id="cv-doc">
+    <div class="cv-header">
+      <h1>${CONFIG.name.toUpperCase()}</h1>
+      <div class="cv-subtitle">${CONFIG.title}</div>
+      <div class="cv-contact">${CONFIG.location} &nbsp;|&nbsp; ${CONFIG.email} &nbsp;|&nbsp; linkedin.com/in/ankit-singh-37a11ba5 &nbsp;|&nbsp; github.com/ankitsingh7392</div>
+    </div>
+    <div class="cv-section"><h2>Professional Summary</h2><p>${strip(CONFIG.bio[0])}</p></div>
+    <div class="cv-section"><h2>Core Technical Skills</h2><table class="cv-skills">${skillsHTML}</table></div>
+    <div class="cv-section"><h2>Work Experience</h2>${experienceHTML}</div>
+    <div class="cv-section"><h2>Certifications</h2><table class="cv-skills">${certsHTML}</table></div>
+    <div class="cv-section"><h2>Recognition</h2><ul>${awardsHTML}</ul></div>
+  </div>`;
+}
+
+el("download-cv").addEventListener("click", () => {
+  const win = window.open("", "_blank");
+  win.document.write(`<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>${CONFIG.name} — CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', Arial, sans-serif; font-size: 11px; color: #111; background: #fff; }
+    #cv-doc { padding: 28px 40px; max-width: 794px; margin: 0 auto; word-wrap: break-word; }
+
+    .cv-header { text-align: center; padding-bottom: 10px; margin-bottom: 14px; border-bottom: 1.5px solid #111; }
+    .cv-header h1 { font-size: 22px; font-weight: 700; letter-spacing: 2.5px; font-family: 'Plus Jakarta Sans', Arial, sans-serif; margin-bottom: 3px; }
+    .cv-subtitle { font-size: 11.5px; color: #2563eb; font-weight: 600; margin-bottom: 4px; }
+    .cv-contact { font-size: 10px; color: #444; }
+
+    .cv-section { margin-bottom: 13px; }
+    .cv-section h2 { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #2563eb; border-bottom: 1px solid #2563eb; padding-bottom: 2px; margin-bottom: 7px; font-family: 'Plus Jakarta Sans', Arial, sans-serif; }
+    .cv-section > p { color: #222; text-align: justify; line-height: 1.5; }
+
+    table.cv-skills { width: 100%; border-collapse: collapse; }
+    table.cv-skills td { padding: 2px 8px 2px 0; font-size: 10.5px; vertical-align: top; line-height: 1.45; }
+    .cv-skill-cat { font-weight: 700; width: 26%; white-space: nowrap; color: #111; }
+
+    .cv-job { margin-bottom: 11px; }
+    .cv-job-header { display: flex; justify-content: space-between; align-items: baseline; }
+    .cv-job-title { font-weight: 700; font-size: 11px; }
+    .cv-job-date { font-size: 10px; color: #555; font-style: italic; white-space: nowrap; margin-left: 8px; }
+    .cv-job-company { font-size: 10.5px; color: #444; font-style: italic; margin-bottom: 3px; }
+    .cv-job ul, .cv-section ul { padding-left: 14px; margin-top: 3px; }
+    .cv-job li, .cv-section li { font-size: 10.5px; color: #222; margin-bottom: 2px; line-height: 1.45; text-align: justify; }
+
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      @page { margin: 0; size: A4; }
+    }
+  </style>
+</head>
+<body>
+  ${buildCVHTML()}
+  <script>
+    window.addEventListener("load", () => { setTimeout(() => { window.print(); }, 600); });
+  </script>
+</body>
+</html>`);
+  win.document.close();
+});
 
 // ── Activate reveal animations ────────────────────────────────
 // Done last — after all content is in the DOM — so nothing is
