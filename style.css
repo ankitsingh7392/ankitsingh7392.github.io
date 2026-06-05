@@ -404,13 +404,13 @@ nav {
 .btn-primary:hover { box-shadow: 0 6px 24px rgba(37,99,235,0.4); transform: translateY(-1px); }
 
 .btn-cv {
-  background: transparent;
-  color: var(--text-muted);
-  border-color: var(--border);
+  background: color-mix(in srgb, #7c3aed 10%, transparent);
+  color: #7c3aed;
+  border-color: color-mix(in srgb, #7c3aed 40%, transparent);
   font-size: 0.85rem;
 }
 
-.btn-cv:hover { border-color: var(--text-muted); color: var(--text); transform: translateY(-1px); }
+.btn-cv:hover { background: color-mix(in srgb, #7c3aed 18%, transparent); border-color: #7c3aed; transform: translateY(-1px); }
 .btn-cv:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
 
 .btn-secondary {
