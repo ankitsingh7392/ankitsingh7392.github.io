@@ -107,7 +107,8 @@ const CONFIG = {
   ],
 
   certifications: [
-    { name: "Claude 101", issuer: "Anthropic", year: "2026", icon: "🎓", link: "https://verify.skilljar.com/c/2j9ffdh9om7d" }
+    { name: "Claude 101", issuer: "Anthropic", year: "2026", icon: "🎓", link: "https://verify.skilljar.com/c/2j9ffdh9om7d" },
+    { name: "Claude Code in Action", issuer: "Anthropic", year: "2026", icon: "🎓", link: "https://verify.skilljar.com/c/tf8bh5uzvk2n" },
   ],
 
   education: [
